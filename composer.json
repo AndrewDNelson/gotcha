@@ -12,7 +12,9 @@
         "laravel/tinker": "^2.8",
         "livewire/livewire": "^3.0@beta",
         "mailersend/laravel-driver": "^2.2",
-        "spatie/laravel-ray": "^1.32"
+        "spatie/laravel-ray": "^1.32",
+        "symfony/http-client": "^6.3",
+        "symfony/mailgun-mailer": "^6.3"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
