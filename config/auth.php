@@ -102,13 +102,13 @@ return [
         'users' => [
             'provider' => 'users',
             'table' => 'password_reset_tokens',
-            'expire' => 60,
+            'expire' => 30,
             'throttle' => 60,
         ],
         'admins' => [
             'provider' => 'admins',
             'table' => 'password_resets_admin',
-            'expire' => 60,
+            'expire' => 30,
             'throttle' => 60,
         ],
     ],
