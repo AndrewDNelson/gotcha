@@ -34,25 +34,29 @@
 
             <nav class="inline-flex list-none items-center">
               <ul class="list-none mr-4 flex items-center">
-                <li class="whitespace-nowrap"><a href="" class="font-semibold py-4 px-6 text-white no-underline relative hidden md:block 
+                <li class="whitespace-nowrap"><a href="" class="font-semibold py-4 px-6 text-white no-underline relative hidden md:block
                   after:content-[''] after:absolute after:left-0 after:bottom-2.5 after:w-full after:h-0.5 after:bg-white after:opacity-0 after:scale-0 after:origin-center after:transition 
                   hover:after:scale-50 hover:after:opacity-50
+                  focus:after:scale-50 focus:after:opacity-50
                   active:after:scale-75 active:after:opacity-100
                   ">Sessions</a>
                 </li>
                 <li class="whitespace-nowrap"><a href="" class="font-semibold py-4 px-6 text-white no-underline relative hidden lg:block
                   after:content-[''] after:absolute after:left-0 after:bottom-2.5 after:w-full after:h-0.5 after:bg-white after:opacity-0 after:scale-0 after:origin-center after:transition 
                   hover:after:scale-50 hover:after:opacity-50
+                  focus:after:scale-50 focus:after:opacity-50
                   active:after:scale-75 active:after:opacity-100
                   ">Speakers</a></li>
                 <li class="whitespace-nowrap"><a href="" class="font-semibold py-4 px-6 text-white no-underline relative hidden xl:block
                   after:content-[''] after:absolute after:left-0 after:bottom-2.5 after:w-full after:h-0.5 after:bg-white after:opacity-0 after:scale-0 after:origin-center after:transition 
                   hover:after:scale-50 hover:after:opacity-50
+                  focus:after:scale-50 focus:after:opacity-50
                   active:after:scale-75 active:after:opacity-100
                   ">Why attend</a></li>
                 <li class="whitespace-nowrap"><a href="" class="font-semibold py-4 px-6 text-white no-underline relative hidden sm:block
                   after:content-[''] after:absolute after:left-0 after:bottom-2.5 after:w-full after:h-0.5 after:bg-white after:opacity-0 after:scale-0 after:origin-center after:transition 
                   hover:after:scale-50 hover:after:opacity-50
+                  focus:after:scale-50 focus:after:opacity-50
                   active:after:scale-75 active:after:opacity-100
                   ">More</a></li>
               </ul>
