@@ -39,34 +39,33 @@
                     </ol>
                 </nav>
 
-                <nav class="inline-flex list-none items-center">
+                <nav class="hidden md:inline-flex list-none items-center">
                     <ul class="list-none mr-4 flex items-center">
-                        <li class="whitespace-nowrap"><a href=""
-                                class="font-semibold py-4 px-6 text-white no-underline relative hidden md:block
+                        <li class="whitespace-nowrap">
+                          <a href="" class="font-semibold py-4 px-6 text-white no-underline relative hidden md:block
                   after:content-[''] after:absolute after:left-0 after:bottom-2.5 after:w-full after:h-0.5 after:bg-white after:opacity-0 after:scale-0 after:origin-center after:transition 
                   hover:after:scale-50 hover:after:opacity-50
                   focus:after:scale-50 focus:after:opacity-50
                   active:after:scale-75 active:after:opacity-100
                   ">Sessions</a>
                         </li>
-                        <li class="whitespace-nowrap"><a href=""
-                                class="font-semibold py-4 px-6 text-white no-underline relative hidden lg:block
+                        <li class="whitespace-nowrap">
+                          <a href="" class="font-semibold py-4 px-6 text-white no-underline relative hidden lg:block
                   after:content-[''] after:absolute after:left-0 after:bottom-2.5 after:w-full after:h-0.5 after:bg-white after:opacity-0 after:scale-0 after:origin-center after:transition 
                   hover:after:scale-50 hover:after:opacity-50
                   focus:after:scale-50 focus:after:opacity-50
                   active:after:scale-75 active:after:opacity-100
                   ">Speakers</a>
                         </li>
-                        <li class="whitespace-nowrap"><a href=""
-                                class="font-semibold py-4 px-6 text-white no-underline relative hidden lg:block
+                        <li class="whitespace-nowrap">
+                          <a href="" class="font-semibold py-4 px-6 text-white no-underline relative hidden lg:block
                   after:content-[''] after:absolute after:left-0 after:bottom-2.5 after:w-full after:h-0.5 after:bg-white after:opacity-0 after:scale-0 after:origin-center after:transition 
                   hover:after:scale-50 hover:after:opacity-50
                   focus:after:scale-50 focus:after:opacity-50
                   active:after:scale-75 active:after:opacity-100
                   ">Why attend</a></li>
                         <li class="whitespace-nowrap relative">
-                            <button type="button"
-                                class="font-semibold py-4 px-6 text-white no-underline relative inline-flex block lg:hidden
+                            <button type="button" class="font-semibold py-4 px-6 text-white no-underline relative inline-flex lg:hidden
                   after:content-[''] after:absolute after:left-0 after:bottom-2.5 after:w-full after:h-0.5 after:bg-white after:opacity-0 after:scale-0 after:origin-center after:transition 
                   hover:after:scale-50 hover:after:opacity-50
                   focus:after:scale-50 focus:after:opacity-50
@@ -80,7 +79,7 @@
                                 </svg>
                             </button>
 
-                            <div class="absolute left-1/2 z-10 mt-5 w-screen max-w-max -translate-x-1/2 px-4 hidden opacity-0 translate-y-1 transition"
+                            <div class="absolute left-1/2 z-10 mt-5 w-screen max-w-max -translate-x-1/2 px-4 flex opacity-0 translate-y-1 transition"
                                 id="more-list">
                                 <div class="w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-white text-sm leading-6 shadow-lg ring-1 ring-gray-900/5">
                                   <div class="p-4">
@@ -109,7 +108,7 @@
                     </ul>
                 </nav>
 
-                <div class="flex items-center ml-auto">
+                <div class="hidden md:flex items-center ml-auto">
                     <div class="flex gap-2">
                         <span class="">
                             <button type="button"
@@ -148,6 +147,20 @@
                         </span>
 
                     </div>
+                </div>
+
+                <div class="flex md:hidden items-center ml-auto">
+                    <button class="inline-block self-center cursor-pointer appearance-none bg-transparent
+                    border-2 border-transparent rounded-md
+                    w-12 h-12"
+                    id="hamburger"> 
+                        
+                        <div class="tham tham-e-slider tham-w-5 mx-auto">
+                            <div class="tham-box">
+                                <div class="tham-inner bg-white"></div>
+                            </div>
+                        </div>
+                    </button>
                 </div>
 
             </div>
@@ -213,8 +226,14 @@
             moreList.classList.toggle('opacity-100');
             moreList.classList.toggle('translate-y-1');
             moreList.classList.toggle('translate-y-0');
-            moreList.classList.toggle('flex');
-            moreList.classList.toggle('hidden');
+        });
+
+        // Small nav hamburger
+        const hamburger = document.getElementById('hamburger');
+
+        hamburger.addEventListener('click', function() {
+            // Toggle the class on the element
+            hamburger.children[0].classList.toggle('tham-active');
         });
     </script>
 </body>
