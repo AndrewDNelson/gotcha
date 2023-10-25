@@ -28,7 +28,10 @@ export default {
             animation: {
                 scale_in: '.6s .1s scale_in backwards',
                 fade_in: 'fade_in .4s ease'
-            }
+            },
+            screens: {
+                'xs': '390px', // min-width
+            },
         },
     },
 
