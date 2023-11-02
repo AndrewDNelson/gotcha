@@ -19,7 +19,7 @@
     <div class="pt-[75px]">
 
 
-        <header class="fixed top-0 left-0 right-0 backdrop-blur-lg backdrop-saturate-150 bg-slate-950/50 h-[75px] z-50">
+        <header class="fixed top-0 left-0 right-0 backdrop-blur-lg backdrop-saturate-150 bg-slate-950/50 h-[75px] z-40">
 
             <div class="py-1 px-8 max-w-7xl mx-auto flex">
                 <nav>
@@ -42,7 +42,7 @@
                 <nav class="hidden md:inline-flex list-none items-center">
                     <ul class="list-none mr-4 flex items-center">
                         <li class="whitespace-nowrap">
-                          <a href="" class="font-semibold py-4 px-6 text-white no-underline relative hidden md:block
+                          <a href="" class="font-semibold py-4 px-6 text-white no-underline relative hidden lg:block
                   after:content-[''] after:absolute after:left-0 after:bottom-2.5 after:w-full after:h-0.5 after:bg-white after:opacity-0 after:scale-0 after:origin-center after:transition 
                   hover:after:scale-50 hover:after:opacity-50
                   focus:after:scale-50 focus:after:opacity-50
@@ -160,6 +160,14 @@
                             </div>
                         </div>
                     </button>
+                    <ul class="block m-0 p-0 absolute top-[75px] inset-x-0 z-30 bg-slate-900 w-screen h-[calc(100vh-75px)] list-none 
+                    text-white font-semibold text-xl leading-5 
+                    transition opacity-0 -translate-y-4">
+                        <li class="ease-out duration-300 translate-x-24 opacity-0"><a href="" class="pt-6 relative block px-7 pb-4">Sessions</a></li>
+                        <li class="ease-out duration-300 translate-x-24 opacity-0"><a href="" class="pt-6 relative block px-7 pb-4">Sponsors</a></li>
+                        <li class="ease-out duration-300 translate-x-24 opacity-0"><a href="" class="pt-6 relative block px-7 pb-4">Why attend</a></li>
+                        <li class="ease-out duration-300 translate-x-24 opacity-0"><a href="" class="pt-6 relative block px-7 pb-4">FAQ</a></li>
+                    </ul>
                 </div>
             </div>
         </header>
@@ -207,7 +215,8 @@
     </div>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
+        // Document fade in
+        window.addEventListener("load", function() {
             let body = document.body;
             body.classList.replace('opacity-0', 'opacity-100')
         });
@@ -238,10 +247,27 @@
 
         // Small nav hamburger
         const hamburger = document.getElementById('hamburger');
+        const ul = hamburger.nextElementSibling;
 
         hamburger.addEventListener('click', function() {
             // Toggle the class on the element
             hamburger.children[0].classList.toggle('tham-active');
+
+            ul.classList.toggle('opacity-0');
+            ul.classList.toggle('opacity-100');
+            ul.classList.toggle('-translate-y-4');
+            ul.classList.toggle('translate-y-0');
+
+            let children = Array.from(ul.children);
+
+            children.forEach((child, index) => {
+                setTimeout(() => {
+                    child.classList.toggle('opacity-0'); 
+                    child.classList.toggle('opacity-100'); 
+                    child.classList.toggle('translate-x-24'); 
+                    child.classList.toggle('translate-x-0'); 
+                }, index * 100);
+            });
         });
     </script>
 </body>
