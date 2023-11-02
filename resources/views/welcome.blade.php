@@ -229,19 +229,15 @@
             event.stopPropagation()
 
             // Toggle the class on the element
-            moreList.classList.toggle('opacity-0');
-            moreList.classList.toggle('opacity-100');
-            moreList.classList.toggle('translate-y-1');
-            moreList.classList.toggle('translate-y-0');
+            moreList.classList.toggle('hidden');
+            moreList.classList.toggle('flex');
         });
 
         document.addEventListener('click', function(event) {
             // Closes the more dropdown
-            if(event.target !== toggleButton && !moreList.contains(event.target)) {
-                moreList.classList.remove('opacity-100');
-                moreList.classList.add('opacity-0');
-                moreList.classList.remove('translate-y-1');
-                moreList.classList.add('translate-y-0');
+            if(event.target !== toggleButton && !moreList.contains(event.target) && moreList.classList.contains('flex')) {
+                moreList.classList.toggle('hidden');
+                moreList.classList.toggle('flex');
             }
         });
 
