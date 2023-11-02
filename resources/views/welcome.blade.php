@@ -15,16 +15,16 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="font-sans antialiased bg-slate-950 opacity-0 transition-opacity ease-in-out duration-300 delay-100">
+<body class="font-sans antialiased bg-white opacity-0 transition-opacity ease-in-out duration-300 delay-100">
     <div class="pt-[75px]">
 
 
-        <header class="fixed top-0 left-0 right-0 backdrop-blur-lg backdrop-saturate-150 bg-slate-950/50 h-[75px] z-40">
+        <header class="fixed top-0 left-0 right-0 backdrop-blur-lg backdrop-saturate-150 bg-white/50 h-[75px] z-40">
 
             <div class="py-1 px-8 max-w-7xl mx-auto flex">
                 <nav>
                     <ol class="inline-flex list-none items-center gap-4 max-w-sm py-4">
-                        <li><svg aria-hidden="true" focusable="false" role="img" class="text-white"
+                        <li><svg aria-hidden="true" focusable="false" role="img" class="text-black"
                                 viewBox="0 0 16 16" width="32" height="32" fill="currentColor"
                                 style="display:inline-block;user-select:none;vertical-align:text-bottom;overflow:visible">
                                 <path
@@ -34,7 +34,7 @@
                         <li class="text-gray-500 font-semibold text-3xl">/</li>
                         <li>
                             <a href="https://githubuniverse.com/"
-                                class="text-white font-bold text-base xs:text-2xl pr-4 whitespace-nowrap">GitHub Universe</a>
+                                class="text-black font-bold text-base xs:text-2xl pr-4 whitespace-nowrap">GitHub Universe</a>
                         </li>
                     </ol>
                 </nav>
@@ -42,31 +42,31 @@
                 <nav class="hidden md:inline-flex list-none items-center">
                     <ul class="list-none mr-4 flex items-center">
                         <li class="whitespace-nowrap">
-                          <a href="" class="font-semibold py-4 px-6 text-white no-underline relative hidden lg:block
-                  after:content-[''] after:absolute after:left-0 after:bottom-2.5 after:w-full after:h-0.5 after:bg-white after:opacity-0 after:scale-0 after:origin-center after:transition 
+                          <a href="" class="font-semibold py-4 px-6 text-black no-underline relative hidden lg:block
+                  after:content-[''] after:absolute after:left-0 after:bottom-2.5 after:w-full after:h-0.5 after:bg-black after:opacity-0 after:scale-0 after:origin-center after:transition 
                   hover:after:scale-50 hover:after:opacity-50
                   focus:after:scale-50 focus:after:opacity-50
                   active:after:scale-75 active:after:opacity-100
                   ">Sessions</a>
                         </li>
                         <li class="whitespace-nowrap">
-                          <a href="" class="font-semibold py-4 px-6 text-white no-underline relative hidden lg:block
-                  after:content-[''] after:absolute after:left-0 after:bottom-2.5 after:w-full after:h-0.5 after:bg-white after:opacity-0 after:scale-0 after:origin-center after:transition 
+                          <a href="" class="font-semibold py-4 px-6 text-black no-underline relative hidden lg:block
+                  after:content-[''] after:absolute after:left-0 after:bottom-2.5 after:w-full after:h-0.5 after:bg-black after:opacity-0 after:scale-0 after:origin-center after:transition 
                   hover:after:scale-50 hover:after:opacity-50
                   focus:after:scale-50 focus:after:opacity-50
                   active:after:scale-75 active:after:opacity-100
                   ">Speakers</a>
                         </li>
                         <li class="whitespace-nowrap">
-                          <a href="" class="font-semibold py-4 px-6 text-white no-underline relative hidden lg:block
-                  after:content-[''] after:absolute after:left-0 after:bottom-2.5 after:w-full after:h-0.5 after:bg-white after:opacity-0 after:scale-0 after:origin-center after:transition 
+                          <a href="" class="font-semibold py-4 px-6 text-black no-underline relative hidden lg:block
+                  after:content-[''] after:absolute after:left-0 after:bottom-2.5 after:w-full after:h-0.5 after:bg-black after:opacity-0 after:scale-0 after:origin-center after:transition 
                   hover:after:scale-50 hover:after:opacity-50
                   focus:after:scale-50 focus:after:opacity-50
                   active:after:scale-75 active:after:opacity-100
                   ">Why attend</a></li>
                         <li class="whitespace-nowrap relative">
-                            <button type="button" class="font-semibold py-4 px-6 text-white no-underline relative inline-flex lg:hidden
-                  after:content-[''] after:absolute after:left-0 after:bottom-2.5 after:w-full after:h-0.5 after:bg-white after:opacity-0 after:scale-0 after:origin-center after:transition 
+                            <button type="button" class="font-semibold py-4 px-6 text-black no-underline relative inline-flex lg:hidden
+                  after:content-[''] after:absolute after:left-0 after:bottom-2.5 after:w-full after:h-0.5 after:bg-black after:opacity-0 after:scale-0 after:origin-center after:transition 
                   hover:after:scale-50 hover:after:opacity-50
                   focus:after:scale-50 focus:after:opacity-50
                   active:after:scale-75 active:after:opacity-100"
@@ -79,7 +79,7 @@
                                 </svg>
                             </button>
 
-                            <div class="absolute left-1/2 z-10 mt-5 w-screen max-w-max -translate-x-1/2 px-4 flex opacity-0 translate-y-1 transition"
+                            <div class="absolute left-1/2 z-10 mt-5 w-screen max-w-max -translate-x-1/2 px-4 hidden"
                                 id="more-list">
                                 <div class="w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-white text-sm leading-6 shadow-lg ring-1 ring-gray-900/5">
                                   <div class="p-4">
@@ -112,7 +112,7 @@
                     <div class="flex gap-2">
                         <span class="">
                             <button type="button"
-                                class="transition group gap-2 inline-flex items-center justify-center rounded-md bg-transparent px-5 py-2 h-12 text-sm font-semibold text-white shadow-sm hover:bg-white/25 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
+                                class="group gap-2 inline-flex items-center justify-center rounded-md bg-transparent px-5 py-2 h-12 text-sm font-semibold text-black shadow-sm border-slate-200	border-2 hover:bg-cyan-100/25 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
                                 Sign in
                                 <svg class="transition -translate-x-0 group-hover:translate-x-1 group-focus:translate-x-1"
                                     width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"
@@ -130,7 +130,7 @@
 
                         <span class="">
                             <button type="button"
-                                class="group gap-2 inline-flex items-center justify-center rounded-md bg-white px-5 py-2 h-12 text-sm font-semibold text-black shadow-sm hover:bg-cyan-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
+                                class="group gap-2 inline-flex items-center justify-center rounded-md bg-black px-5 py-2 h-12 text-sm font-semibold text-white shadow-sm hover:bg-slate-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
                                 Sign up
                                 <svg class="transition -translate-x-0 group-hover:translate-x-1 group-focus:translate-x-1"
                                     width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"
@@ -156,12 +156,12 @@
                     id="hamburger"> 
                         <div class="tham tham-e-slider tham-w-5 mx-auto">
                             <div class="tham-box">
-                                <div class="tham-inner bg-white !h-0.5 before:!h-0.5 after:!h-0.5"></div>
+                                <div class="tham-inner bg-black !h-0.5 before:!h-0.5 after:!h-0.5"></div>
                             </div>
                         </div>
                     </button>
-                    <ul class="block m-0 p-0 absolute top-[75px] inset-x-0 z-30 bg-slate-900 w-screen h-[calc(100vh-75px)] list-none 
-                    text-white font-semibold text-xl leading-5 
+                    <ul class="block m-0 p-0 absolute top-[75px] inset-x-0 z-30 bg-slate-100 w-screen h-[calc(100vh-75px)] list-none 
+                    text-black font-semibold text-xl leading-5 
                     transition opacity-0 -translate-y-4">
                         <li class="ease-out duration-300 translate-x-24 opacity-0"><a href="" class="pt-6 relative block px-7 pb-4">Sessions</a></li>
                         <li class="ease-out duration-300 translate-x-24 opacity-0"><a href="" class="pt-6 relative block px-7 pb-4">Sponsors</a></li>
@@ -177,20 +177,20 @@
             <div class="flex flex-col gap-12">
                 <section class="flex flex-col md:gap-8 gap-6">
                     {{-- Hero Image --}}
-                    <div class="relative mx-auto overflow-hidden cursor-pointer rounded-3xl md:h-[465px] h-72">
+                    <div class="relative mx-auto overflow-hidden rounded-3xl md:h-[465px] h-72">
                         <img class="object-cover h-full transition ease-out duration-300 hover:scale-105 animate-scale_in"
                             src="/images/hero-video@2x.jpg" alt="">
                     </div>
 
                     {{-- 3 section words --}}
                     <div class="flex flex-wrap xl:justify-between justify-evenly gap-x-6 gap-y-2">
-                        <span class="uppercase font-medium text-xl lg:text-2xl text-white font-mono">November 8-9</span>
-                        <span class="uppercase font-medium text-xl lg:text-2xl text-white font-mono">Live &
+                        <span class="uppercase font-medium text-xl lg:text-2xl text-black font-mono">November 8-9</span>
+                        <span class="uppercase font-medium text-xl lg:text-2xl text-black font-mono">Live &
                             Virtual</span>
                         <span
-                            class="uppercase font-medium text-xl lg:text-2xl text-white font-mono xl:block hidden">YERBA
+                            class="uppercase font-medium text-xl lg:text-2xl text-black font-mono xl:block hidden">YERBA
                             BUENA CENTER FOR THE ARTS, SAN FRANCISCO</span>
-                        <span class="uppercase font-medium text-xl lg:text-2xl text-white font-mono xl:hidden">YBCA, SAN
+                        <span class="uppercase font-medium text-xl lg:text-2xl text-black font-mono xl:hidden">YBCA, SAN
                             FRANCISCO</span>
                     </div>
 
@@ -205,7 +205,6 @@
                             Our global developer conference is back. <br class="hidden xl:block">Join us as we build
                             the future together.
                         </p>
-
                     </div>
 
                 </section>
