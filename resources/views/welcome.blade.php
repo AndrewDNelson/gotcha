@@ -217,11 +217,23 @@
         const moreList = document.getElementById('more-list');
 
         toggleButton.addEventListener('click', function() {
+            event.stopPropagation()
+
             // Toggle the class on the element
             moreList.classList.toggle('opacity-0');
             moreList.classList.toggle('opacity-100');
             moreList.classList.toggle('translate-y-1');
             moreList.classList.toggle('translate-y-0');
+        });
+
+        document.addEventListener('click', function(event) {
+            // Closes the more dropdown
+            if(event.target !== toggleButton && !moreList.contains(event.target)) {
+                moreList.classList.remove('opacity-100');
+                moreList.classList.add('opacity-0');
+                moreList.classList.remove('translate-y-1');
+                moreList.classList.add('translate-y-0');
+            }
         });
 
         // Small nav hamburger
