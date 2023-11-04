@@ -218,13 +218,13 @@
                     <div class="flex justify-between flex-col xl:flex-row gap-4 items-center content-center">
                         <p class="text-center xl:text-left font-bold text-xl lg:text-3xl text-gray-500">
                             Our global developer conference is back.
-                            <br>
+                            <br class="hidden md:block">
                             Join us as we build the future together.
                         </p>
                         <a href="" class="transition group gap-2 inline-flex items-center justify-center rounded-md 
                         bg-transparent 
-                        p-5 h-14 w-52 
-                        text-2xl font-semibold text-black shadow-sm 
+                        px-8 py-5 h-14 md:w-56 w-full
+                        text-xl lg:text-2xl font-semibold text-black shadow-sm 
                         border-slate-200 border-2  hover:border-slate-900 
                         focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
                             Get started
