@@ -16,12 +16,24 @@ export default {
             },
 
             keyframes: {
-                scale_in: {
+                'scale-in': {
                     '0%' : {transform:'scale(1.1)'},
+                },
+                'slide-down': {
+                    '0%' : {
+                        transform:'translateY(-100%)',
+                        opacity: 0,
+                    },
+                },
+                'slide-up': {
+                    '0%' : {
+                        transform:'translateY(100%)',
+                        opacity: 0,
+                    },
                 },
             },
             animation: {
-                scale_in: '.6s .1s scale_in backwards',
+                'scale-in': '.6s .1s scale-in backwards',
             },
             screens: {
                 'xs': '390px', // min-width

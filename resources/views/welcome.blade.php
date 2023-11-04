@@ -173,7 +173,7 @@
                 <section class="flex flex-col md:gap-8 gap-6">
                     {{-- Hero Image --}}
                     <div class="relative mx-auto overflow-hidden rounded-3xl md:h-[465px] h-72">
-                        <img class="object-cover h-full transition ease-out duration-300 hover:scale-105 animate-scale_in"
+                        <img class="object-cover h-full transition ease-out duration-300 hover:scale-105 animate-scale-in"
                             src="/images/gotcha-hero@2x.png" alt="">
                     </div>
 
@@ -252,7 +252,30 @@
         // Document fade in
         window.addEventListener("load", function() {
             let body = document.body;
-            body.classList.replace('opacity-0', 'opacity-100')
+            body.classList.replace('opacity-0', 'opacity-100');
+
+            const svg = document.querySelector('svg#hero-text');
+
+            const pathClasses = [
+                "animate-[280ms_240ms_cubic-bezier(0,.5,0,1)_slide-down_backwards]",
+                "animate-[360ms_280ms_cubic-bezier(0,.5,0,1)_slide-up_backwards]",
+                "animate-[440ms_320ms_cubic-bezier(0,.5,0,1)_slide-down_backwards]",
+                "animate-[520ms_360ms_cubic-bezier(0,.5,0,1)_slide-up_backwards]",
+                "animate-[600ms_400ms_cubic-bezier(0,.5,0,1)_slide-down_backwards]",
+                "animate-[680ms_440ms_cubic-bezier(0,.5,0,1)_slide-up_backwards]",
+                "animate-[760ms_480ms_cubic-bezier(0,.5,0,1)_slide-down_backwards]",
+                "animate-[820ms_520ms_cubic-bezier(0,.5,0,1)_slide-up_backwards]",
+            ];
+
+            // Get all path elements from the SVG
+            const paths = svg.querySelectorAll('path');
+
+            // Loop through each path and add the appropriate class from the array
+            paths.forEach((path, index) => {
+                if (pathClasses[index]) {
+                    path.classList.add(pathClasses[index]);
+                }
+            });
         });
 
         // Opens the more dropdown
