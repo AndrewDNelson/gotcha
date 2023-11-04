@@ -110,41 +110,36 @@
 
                 <div class="hidden md:flex items-center ml-auto">
                     <div class="flex gap-2">
-                        <span class="">
-                            <button type="button"
-                                class="group gap-2 inline-flex items-center justify-center rounded-md bg-transparent px-5 py-2 h-12 text-sm font-semibold text-black shadow-sm border-slate-200	border-2 hover:bg-cyan-100/25 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
-                                Sign in
-                                <svg class="transition -translate-x-0 group-hover:translate-x-1 group-focus:translate-x-1"
-                                    width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"
-                                    focusable="false" data-testid="Button-expandable-arrow">
-                                    <path fill="currentColor"
-                                        d="M7.28033 3.21967C6.98744 2.92678 6.51256 2.92678 6.21967 3.21967C5.92678 3.51256 5.92678 3.98744 6.21967 4.28033L7.28033 3.21967ZM11 8L11.5303 8.53033C11.8232 8.23744 11.8232 7.76256 11.5303 7.46967L11 8ZM6.21967 11.7197C5.92678 12.0126 5.92678 12.4874 6.21967 12.7803C6.51256 13.0732 6.98744 13.0732 7.28033 12.7803L6.21967 11.7197ZM6.21967 4.28033L10.4697 8.53033L11.5303 7.46967L7.28033 3.21967L6.21967 4.28033ZM10.4697 7.46967L6.21967 11.7197L7.28033 12.7803L11.5303 8.53033L10.4697 7.46967Z">
-                                    </path>
-                                    <path
-                                        class="origin-center scale-0 group-hover:scale-100 group-focus:scale-100 transition"
-                                        stroke="currentColor" d="M1.75 8H11" stroke-width="1.5" stroke-linecap="round">
-                                    </path>
-                                </svg>
-                            </button>
-                        </span>
-
-                        <span class="">
-                            <button type="button"
-                                class="group gap-2 inline-flex items-center justify-center rounded-md bg-black px-5 py-2 h-12 text-sm font-semibold text-white shadow-sm hover:bg-slate-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
-                                Sign up
-                                <svg class="transition -translate-x-0 group-hover:translate-x-1 group-focus:translate-x-1"
-                                    width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"
-                                    focusable="false" data-testid="Button-expandable-arrow">
-                                    <path fill="currentColor"
-                                        d="M7.28033 3.21967C6.98744 2.92678 6.51256 2.92678 6.21967 3.21967C5.92678 3.51256 5.92678 3.98744 6.21967 4.28033L7.28033 3.21967ZM11 8L11.5303 8.53033C11.8232 8.23744 11.8232 7.76256 11.5303 7.46967L11 8ZM6.21967 11.7197C5.92678 12.0126 5.92678 12.4874 6.21967 12.7803C6.51256 13.0732 6.98744 13.0732 7.28033 12.7803L6.21967 11.7197ZM6.21967 4.28033L10.4697 8.53033L11.5303 7.46967L7.28033 3.21967L6.21967 4.28033ZM10.4697 7.46967L6.21967 11.7197L7.28033 12.7803L11.5303 8.53033L10.4697 7.46967Z">
-                                    </path>
-                                    <path
-                                        class="origin-center scale-0 group-hover:scale-100 group-focus:scale-100 transition"
-                                        stroke="currentColor" d="M1.75 8H11" stroke-width="1.5" stroke-linecap="round">
-                                    </path>
-                                </svg>
-                            </button>
-                        </span>
+                        
+                        <a href="" class="transition group gap-2 inline-flex items-center justify-center rounded-md bg-transparent px-5 py-2 h-12 text-sm font-semibold text-black shadow-sm border-slate-200	border-2  hover:border-slate-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
+                            Sign in
+                            <svg class="transition -translate-x-0 group-hover:translate-x-1 group-focus:translate-x-1"
+                                width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"
+                                focusable="false" data-testid="Button-expandable-arrow">
+                                <path fill="currentColor"
+                                    d="M7.28033 3.21967C6.98744 2.92678 6.51256 2.92678 6.21967 3.21967C5.92678 3.51256 5.92678 3.98744 6.21967 4.28033L7.28033 3.21967ZM11 8L11.5303 8.53033C11.8232 8.23744 11.8232 7.76256 11.5303 7.46967L11 8ZM6.21967 11.7197C5.92678 12.0126 5.92678 12.4874 6.21967 12.7803C6.51256 13.0732 6.98744 13.0732 7.28033 12.7803L6.21967 11.7197ZM6.21967 4.28033L10.4697 8.53033L11.5303 7.46967L7.28033 3.21967L6.21967 4.28033ZM10.4697 7.46967L6.21967 11.7197L7.28033 12.7803L11.5303 8.53033L10.4697 7.46967Z">
+                                </path>
+                                <path
+                                    class="origin-center scale-0 group-hover:scale-100 group-focus:scale-100 transition"
+                                    stroke="currentColor" d="M1.75 8H11" stroke-width="1.5" stroke-linecap="round">
+                                </path>
+                            </svg>
+                        </a>
+                        
+                        <a href="" class="group gap-2 inline-flex items-center justify-center rounded-md bg-black px-5 py-2 h-12 text-sm font-semibold text-white shadow-sm hover:bg-slate-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
+                            Sign up
+                            <svg class="transition -translate-x-0 group-hover:translate-x-1 group-focus:translate-x-1"
+                                width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"
+                                focusable="false" data-testid="Button-expandable-arrow">
+                                <path fill="currentColor"
+                                    d="M7.28033 3.21967C6.98744 2.92678 6.51256 2.92678 6.21967 3.21967C5.92678 3.51256 5.92678 3.98744 6.21967 4.28033L7.28033 3.21967ZM11 8L11.5303 8.53033C11.8232 8.23744 11.8232 7.76256 11.5303 7.46967L11 8ZM6.21967 11.7197C5.92678 12.0126 5.92678 12.4874 6.21967 12.7803C6.51256 13.0732 6.98744 13.0732 7.28033 12.7803L6.21967 11.7197ZM6.21967 4.28033L10.4697 8.53033L11.5303 7.46967L7.28033 3.21967L6.21967 4.28033ZM10.4697 7.46967L6.21967 11.7197L7.28033 12.7803L11.5303 8.53033L10.4697 7.46967Z">
+                                </path>
+                                <path
+                                    class="origin-center scale-0 group-hover:scale-100 group-focus:scale-100 transition"
+                                    stroke="currentColor" d="M1.75 8H11" stroke-width="1.5" stroke-linecap="round">
+                                </path>
+                            </svg>
+                        </a>
 
                     </div>
                 </div>
@@ -195,7 +190,7 @@
                     </div>
 
                     {{-- Attention grabbing Text --}}
-                    <svg class="w-full fill-current text-black" viewBox="0 0 691 97" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="w-full fill-current text-black" viewBox="0 0 691 97" xmlns="http://www.w3.org/2000/svg" id="hero-text">
                         <path d="M47.688 96.28C40.264 96.28 33.6507 95.128 27.848 92.824C22.0453 90.52 17.1387 87.2773 13.128 83.096C9.20267 78.8293 6.17333 73.752 4.04 67.864C1.992 61.976 0.968 55.448 0.968 48.28C0.968 40.5147 2.07733 33.688 4.296 27.8C6.6 21.8267 9.84267 16.8347 14.024 12.824C18.2907 8.72799 23.368 5.65599 29.256 3.60799C35.144 1.47466 41.672 0.407997 48.84 0.407997C57.6293 0.407997 65.1813 1.816 71.496 4.632C77.896 7.36266 82.9307 11.2027 86.6 16.152C90.2693 21.1013 92.4027 26.904 93 33.56H66.248C65.736 31.256 64.712 29.2933 63.176 27.672C61.64 25.9653 59.6773 24.6853 57.288 23.832C54.8987 22.8933 52.0827 22.424 48.84 22.424C44.5733 22.424 40.8187 23.32 37.576 25.112C34.4187 26.8187 31.944 29.592 30.152 33.432C28.4453 37.1867 27.592 42.136 27.592 48.28C27.592 52.888 28.0613 56.8987 29 60.312C29.9387 63.64 31.304 66.3707 33.096 68.504C34.888 70.6373 37.064 72.216 39.624 73.24C42.184 74.264 45.0427 74.776 48.2 74.776C52.4667 74.776 56.0933 74.0933 59.08 72.728C62.0667 71.3627 64.328 69.4427 65.864 66.968C67.4853 64.408 68.296 61.464 68.296 58.136V54.296L74.824 62.104H46.664V44.056H94.408V55.32C94.408 61.464 93.2987 67.0533 91.08 72.088C88.8613 77.1227 85.704 81.432 81.608 85.016C77.512 88.6 72.6053 91.3733 66.888 93.336C61.1707 95.2987 54.7707 96.28 47.688 96.28Z"/>
                         <path d="M144.809 96.28C137.641 96.28 131.156 95.256 125.353 93.208C119.55 91.0747 114.516 88.0027 110.249 83.992C106.068 79.896 102.825 74.8613 100.521 68.888C98.3023 62.9147 97.193 56.0453 97.193 48.28C97.193 40.5147 98.3023 33.688 100.521 27.8C102.825 21.8267 106.068 16.8347 110.249 12.824C114.516 8.72799 119.55 5.65599 125.353 3.60799C131.156 1.47466 137.641 0.407997 144.809 0.407997C151.977 0.407997 158.462 1.47466 164.265 3.60799C170.153 5.65599 175.188 8.72799 179.369 12.824C183.636 16.8347 186.878 21.8267 189.097 27.8C191.401 33.688 192.553 40.5147 192.553 48.28C192.553 56.0453 191.401 62.9147 189.097 68.888C186.878 74.8613 183.636 79.896 179.369 83.992C175.188 88.0027 170.153 91.0747 164.265 93.208C158.462 95.256 151.977 96.28 144.809 96.28Z M144.809 74.264C149.076 74.264 152.788 73.368 155.945 71.576C159.102 69.784 161.534 67.0107 163.241 63.256C165.033 59.416 165.929 54.424 165.929 48.28C165.929 43.672 165.417 39.7467 164.393 36.504C163.369 33.2613 161.918 30.616 160.041 28.568C158.249 26.4347 156.03 24.8987 153.385 23.96C150.825 22.936 147.966 22.424 144.809 22.424C140.628 22.424 136.958 23.32 133.801 25.112C130.644 26.8187 128.169 29.592 126.377 33.432C124.67 37.1867 123.817 42.136 123.817 48.28C123.817 52.888 124.329 56.856 125.353 60.184C126.377 63.512 127.785 66.2 129.577 68.248C131.454 70.296 133.673 71.832 136.233 72.856C138.793 73.7947 141.652 74.264 144.809 74.264Z"/>
                         <path d="M216.827 95V23.96H191.099V1.688H269.307V23.96H242.811V95H216.827Z"/>
@@ -220,11 +215,31 @@
                     
                     
                     {{-- Longer text and sign up --}}
-                    <div class="flex justify-between flex-col xl:flex-row gap-4 content-center">
+                    <div class="flex justify-between flex-col xl:flex-row gap-4 items-center content-center">
                         <p class="text-center xl:text-left font-bold text-xl lg:text-3xl text-gray-500">
-                            Our global developer conference is back. <br class="hidden xl:block">Join us as we build
-                            the future together.
+                            Our global developer conference is back.
+                            <br>
+                            Join us as we build the future together.
                         </p>
+                        <a href="" class="transition group gap-2 inline-flex items-center justify-center rounded-md 
+                        bg-transparent 
+                        p-5 h-14 w-52 
+                        text-2xl font-semibold text-black shadow-sm 
+                        border-slate-200 border-2  hover:border-slate-900 
+                        focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
+                            Get started
+                            <svg class="transition -translate-x-0 group-hover:translate-x-1 group-focus:translate-x-1"
+                                width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"
+                                focusable="false" data-testid="Button-expandable-arrow">
+                                <path fill="currentColor"
+                                    d="M7.28033 3.21967C6.98744 2.92678 6.51256 2.92678 6.21967 3.21967C5.92678 3.51256 5.92678 3.98744 6.21967 4.28033L7.28033 3.21967ZM11 8L11.5303 8.53033C11.8232 8.23744 11.8232 7.76256 11.5303 7.46967L11 8ZM6.21967 11.7197C5.92678 12.0126 5.92678 12.4874 6.21967 12.7803C6.51256 13.0732 6.98744 13.0732 7.28033 12.7803L6.21967 11.7197ZM6.21967 4.28033L10.4697 8.53033L11.5303 7.46967L7.28033 3.21967L6.21967 4.28033ZM10.4697 7.46967L6.21967 11.7197L7.28033 12.7803L11.5303 8.53033L10.4697 7.46967Z">
+                                </path>
+                                <path
+                                    class="origin-center scale-0 group-hover:scale-100 group-focus:scale-100 transition"
+                                    stroke="currentColor" d="M1.75 8H11" stroke-width="1.5" stroke-linecap="round">
+                                </path>
+                            </svg>
+                        </a>
                     </div>
 
                 </section>
