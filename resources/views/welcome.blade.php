@@ -173,7 +173,8 @@
                 <section class="flex flex-col md:gap-8 gap-6">
                     {{-- Hero Image --}}
                     <div class="relative mx-auto overflow-hidden rounded-3xl md:h-[465px] h-72">
-                        <img class="object-cover h-full transition ease-out duration-300 hover:scale-105 animate-scale-in"
+                        <img class="object-cover h-full transition ease-out duration-300 hover:scale-105"
+                            id="hero-image"
                             src="/images/gotcha-hero@2x.png" alt="">
                     </div>
 
@@ -251,8 +252,11 @@
     <script>
         // Document fade in
         window.addEventListener("load", function() {
-            let body = document.body;
+            const body = document.body;
             body.classList.replace('opacity-0', 'opacity-100');
+
+            const img = document.querySelector('img#hero-image');
+            img.classList.add('animate-scale-in');
 
             const svg = document.querySelector('svg#hero-text');
 
