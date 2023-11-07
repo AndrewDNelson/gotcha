@@ -6,9 +6,12 @@
 
         <header class="fixed top-0 left-0 right-0 backdrop-blur-lg backdrop-saturate-150 bg-white/50 h-[75px] z-40">
 
-            <div class="py-1 px-8 max-w-7xl mx-auto flex">
-                <nav>
-                    <ol class="inline-flex list-none items-center gap-4 max-w-sm py-4">
+            
+            <nav class="py-1 px-8 max-w-7xl mx-auto flex justify-between items-center h-full">
+                {{-- Left side --}}
+                <div class="flex items-center">
+                    {{-- Main link --}}
+                    <ol class="inline-flex list-none items-center gap-4">
                         <li><svg aria-hidden="true" focusable="false" role="img" class="text-black"
                                 viewBox="0 0 16 16" width="32" height="32" fill="currentColor"
                                 style="display:inline-block;user-select:none;vertical-align:text-bottom;overflow:visible">
@@ -22,39 +25,38 @@
                                 class="text-black font-bold text-base xs:text-2xl pr-4 whitespace-nowrap">GitHub Universe</a>
                         </li>
                     </ol>
-                </nav>
-
-                <nav class="hidden md:inline-flex list-none items-center">
-                    <ul class="list-none mr-4 flex items-center">
+                    {{-- Link options --}}
+                    <ul class="list-none hidden md:flex items-center">
                         <li class="whitespace-nowrap">
-                          <a href="" class="font-semibold py-4 px-6 text-black no-underline relative hidden lg:block
-                  after:content-[''] after:absolute after:left-0 after:bottom-2.5 after:w-full after:h-0.5 after:bg-black after:opacity-0 after:scale-0 after:origin-center after:transition 
-                  hover:after:scale-50 hover:after:opacity-50
-                  focus:after:scale-50 focus:after:opacity-50
-                  active:after:scale-75 active:after:opacity-100
-                  ">Sessions</a>
+                        <a href="" class="font-semibold py-4 px-6 text-black no-underline relative hidden lg:block
+                                        after:content-[''] after:absolute after:left-0 after:bottom-2.5 after:w-full after:h-0.5 after:bg-black after:opacity-0 after:scale-0 after:origin-center after:transition
+                                        hover:after:scale-50 hover:after:opacity-50
+                                        focus:after:scale-50 focus:after:opacity-50
+                                        active:after:scale-75 active:after:opacity-100
+                                        ">Sessions</a>
                         </li>
                         <li class="whitespace-nowrap">
-                          <a href="" class="font-semibold py-4 px-6 text-black no-underline relative hidden lg:block
-                  after:content-[''] after:absolute after:left-0 after:bottom-2.5 after:w-full after:h-0.5 after:bg-black after:opacity-0 after:scale-0 after:origin-center after:transition 
-                  hover:after:scale-50 hover:after:opacity-50
-                  focus:after:scale-50 focus:after:opacity-50
-                  active:after:scale-75 active:after:opacity-100
-                  ">Speakers</a>
+                        <a href="" class="font-semibold py-4 px-6 text-black no-underline relative hidden lg:block
+                                        after:content-[''] after:absolute after:left-0 after:bottom-2.5 after:w-full after:h-0.5 after:bg-black after:opacity-0 after:scale-0 after:origin-center after:transition
+                                        hover:after:scale-50 hover:after:opacity-50
+                                        focus:after:scale-50 focus:after:opacity-50
+                                        active:after:scale-75 active:after:opacity-100
+                                        ">Speakers</a>
                         </li>
                         <li class="whitespace-nowrap">
-                          <a href="" class="font-semibold py-4 px-6 text-black no-underline relative hidden lg:block
-                  after:content-[''] after:absolute after:left-0 after:bottom-2.5 after:w-full after:h-0.5 after:bg-black after:opacity-0 after:scale-0 after:origin-center after:transition 
-                  hover:after:scale-50 hover:after:opacity-50
-                  focus:after:scale-50 focus:after:opacity-50
-                  active:after:scale-75 active:after:opacity-100
-                  ">Why attend</a></li>
+                            <a href="" class="font-semibold py-4 px-6 text-black no-underline relative hidden lg:block
+                                        after:content-[''] after:absolute after:left-0 after:bottom-2.5 after:w-full after:h-0.5 after:bg-black after:opacity-0 after:scale-0 after:origin-center after:transition
+                                        hover:after:scale-50 hover:after:opacity-50
+                                        focus:after:scale-50 focus:after:opacity-50
+                                        active:after:scale-75 active:after:opacity-100
+                                        ">Why attend</a>
+                        </li>
                         <li class="whitespace-nowrap relative">
                             <button type="button" class="font-semibold py-4 px-6 text-black no-underline relative inline-flex lg:hidden
-                  after:content-[''] after:absolute after:left-0 after:bottom-2.5 after:w-full after:h-0.5 after:bg-black after:opacity-0 after:scale-0 after:origin-center after:transition 
-                  hover:after:scale-50 hover:after:opacity-50
-                  focus:after:scale-50 focus:after:opacity-50
-                  active:after:scale-75 active:after:opacity-100"
+                                        after:content-[''] after:absolute after:left-0 after:bottom-2.5 after:w-full after:h-0.5 after:bg-black after:opacity-0 after:scale-0 after:origin-center after:transition
+                                        hover:after:scale-50 hover:after:opacity-50
+                                        focus:after:scale-50 focus:after:opacity-50
+                                        active:after:scale-75 active:after:opacity-100"
                                 aria-expanded="false" id="toggle-list">
                                 <span>More</span>
                                 <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -63,73 +65,70 @@
                                         clip-rule="evenodd" />
                                 </svg>
                             </button>
-
                             <div class="absolute left-1/2 z-10 mt-5 w-screen max-w-max -translate-x-1/2 px-4 hidden"
                                 id="more-list">
                                 <div class="w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-white text-sm leading-6 shadow-lg ring-1 ring-gray-900/5">
-                                  <div class="p-4">
-                                      <div class="relative rounded-lg p-4 hover:bg-gray-50">
-                                          <a href="#" class="font-semibold text-gray-900">
-                                              Sessions
-                                              <span class="absolute inset-0"></span>
-                                          </a>
-                                      </div>
-                                      <div class="relative rounded-lg p-4 hover:bg-gray-50">
-                                          <a href="#" class="font-semibold text-gray-900">
-                                              Speakers
-                                              <span class="absolute inset-0"></span>
-                                          </a>
-                                      </div>
-                                      <div class="relative rounded-lg p-4 hover:bg-gray-50">
+                                <div class="p-4">
+                                    <div class="relative rounded-lg p-4 hover:bg-gray-50">
+                                        <a href="#" class="font-semibold text-gray-900">
+                                            Sessions
+                                            <span class="absolute inset-0"></span>
+                                        </a>
+                                    </div>
+                                    <div class="relative rounded-lg p-4 hover:bg-gray-50">
+                                        <a href="#" class="font-semibold text-gray-900">
+                                            Speakers
+                                            <span class="absolute inset-0"></span>
+                                        </a>
+                                    </div>
+                                    <div class="relative rounded-lg p-4 hover:bg-gray-50">
                                         <a href="#" class="font-semibold text-gray-900">
                                             Why attend
                                             <span class="absolute inset-0"></span>
                                         </a>
                                     </div>
-                                  </div>
+                                </div>
                                 </div>
                             </div>
                         </li>
                     </ul>
-                </nav>
-
-                <div class="hidden md:flex items-center ml-auto">
-                    <div class="flex gap-2">
-                        
-                        <a href="" class="transition group gap-2 inline-flex items-center justify-center rounded-md bg-transparent px-5 py-2 h-12 text-sm font-semibold text-black shadow-sm border-slate-200	border-2  hover:border-slate-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
-                            Sign in
-                            <svg class="transition -translate-x-0 group-hover:translate-x-1 group-focus:translate-x-1"
-                                width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"
-                                focusable="false" data-testid="Button-expandable-arrow">
-                                <path fill="currentColor"
-                                    d="M7.28033 3.21967C6.98744 2.92678 6.51256 2.92678 6.21967 3.21967C5.92678 3.51256 5.92678 3.98744 6.21967 4.28033L7.28033 3.21967ZM11 8L11.5303 8.53033C11.8232 8.23744 11.8232 7.76256 11.5303 7.46967L11 8ZM6.21967 11.7197C5.92678 12.0126 5.92678 12.4874 6.21967 12.7803C6.51256 13.0732 6.98744 13.0732 7.28033 12.7803L6.21967 11.7197ZM6.21967 4.28033L10.4697 8.53033L11.5303 7.46967L7.28033 3.21967L6.21967 4.28033ZM10.4697 7.46967L6.21967 11.7197L7.28033 12.7803L11.5303 8.53033L10.4697 7.46967Z">
-                                </path>
-                                <path
-                                    class="origin-center scale-0 group-hover:scale-100 group-focus:scale-100 transition"
-                                    stroke="currentColor" d="M1.75 8H11" stroke-width="1.5" stroke-linecap="round">
-                                </path>
-                            </svg>
-                        </a>
-                        
-                        <a href="" class="group gap-2 inline-flex items-center justify-center rounded-md bg-black px-5 py-2 h-12 text-sm font-semibold text-white shadow-sm hover:bg-slate-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
-                            Sign up
-                            <svg class="transition -translate-x-0 group-hover:translate-x-1 group-focus:translate-x-1"
-                                width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"
-                                focusable="false" data-testid="Button-expandable-arrow">
-                                <path fill="currentColor"
-                                    d="M7.28033 3.21967C6.98744 2.92678 6.51256 2.92678 6.21967 3.21967C5.92678 3.51256 5.92678 3.98744 6.21967 4.28033L7.28033 3.21967ZM11 8L11.5303 8.53033C11.8232 8.23744 11.8232 7.76256 11.5303 7.46967L11 8ZM6.21967 11.7197C5.92678 12.0126 5.92678 12.4874 6.21967 12.7803C6.51256 13.0732 6.98744 13.0732 7.28033 12.7803L6.21967 11.7197ZM6.21967 4.28033L10.4697 8.53033L11.5303 7.46967L7.28033 3.21967L6.21967 4.28033ZM10.4697 7.46967L6.21967 11.7197L7.28033 12.7803L11.5303 8.53033L10.4697 7.46967Z">
-                                </path>
-                                <path
-                                    class="origin-center scale-0 group-hover:scale-100 group-focus:scale-100 transition"
-                                    stroke="currentColor" d="M1.75 8H11" stroke-width="1.5" stroke-linecap="round">
-                                </path>
-                            </svg>
-                        </a>
-
-                    </div>
                 </div>
 
-                <div class="flex md:hidden items-center ml-auto">
+                {{-- Sign in and sign up --}}
+                <div class="hidden md:flex items-center gap-2">
+                    <a href="" class="transition group gap-2 inline-flex items-center justify-center rounded-md bg-transparent px-5 py-2 h-12 text-sm font-semibold text-black shadow-sm border-slate-200	border-2  hover:border-slate-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
+                        Sign in
+                        <svg class="transition -translate-x-0 group-hover:translate-x-1 group-focus:translate-x-1"
+                            width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"
+                            focusable="false" data-testid="Button-expandable-arrow">
+                            <path fill="currentColor"
+                                d="M7.28033 3.21967C6.98744 2.92678 6.51256 2.92678 6.21967 3.21967C5.92678 3.51256 5.92678 3.98744 6.21967 4.28033L7.28033 3.21967ZM11 8L11.5303 8.53033C11.8232 8.23744 11.8232 7.76256 11.5303 7.46967L11 8ZM6.21967 11.7197C5.92678 12.0126 5.92678 12.4874 6.21967 12.7803C6.51256 13.0732 6.98744 13.0732 7.28033 12.7803L6.21967 11.7197ZM6.21967 4.28033L10.4697 8.53033L11.5303 7.46967L7.28033 3.21967L6.21967 4.28033ZM10.4697 7.46967L6.21967 11.7197L7.28033 12.7803L11.5303 8.53033L10.4697 7.46967Z">
+                            </path>
+                            <path
+                                class="origin-center scale-0 group-hover:scale-100 group-focus:scale-100 transition"
+                                stroke="currentColor" d="M1.75 8H11" stroke-width="1.5" stroke-linecap="round">
+                            </path>
+                        </svg>
+                    </a>
+                        
+                    <a href="" class="group gap-2 inline-flex items-center justify-center rounded-md bg-black px-5 py-2 h-12 text-sm font-semibold text-white shadow-sm hover:bg-slate-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
+                        Sign up
+                        <svg class="transition -translate-x-0 group-hover:translate-x-1 group-focus:translate-x-1"
+                            width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"
+                            focusable="false" data-testid="Button-expandable-arrow">
+                            <path fill="currentColor"
+                                d="M7.28033 3.21967C6.98744 2.92678 6.51256 2.92678 6.21967 3.21967C5.92678 3.51256 5.92678 3.98744 6.21967 4.28033L7.28033 3.21967ZM11 8L11.5303 8.53033C11.8232 8.23744 11.8232 7.76256 11.5303 7.46967L11 8ZM6.21967 11.7197C5.92678 12.0126 5.92678 12.4874 6.21967 12.7803C6.51256 13.0732 6.98744 13.0732 7.28033 12.7803L6.21967 11.7197ZM6.21967 4.28033L10.4697 8.53033L11.5303 7.46967L7.28033 3.21967L6.21967 4.28033ZM10.4697 7.46967L6.21967 11.7197L7.28033 12.7803L11.5303 8.53033L10.4697 7.46967Z">
+                            </path>
+                            <path
+                                class="origin-center scale-0 group-hover:scale-100 group-focus:scale-100 transition"
+                                stroke="currentColor" d="M1.75 8H11" stroke-width="1.5" stroke-linecap="round">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+
+                {{-- Responsive nav menu --}}
+                <div class="flex md:hidden items-center">
                     <button class="inline-block self-center cursor-pointer appearance-none bg-transparent
                     border-2 border-transparent rounded-md
                     w-12 h-12"
@@ -149,7 +148,8 @@
                         <li class="ease-out duration-300 translate-x-24 opacity-0"><a href="" class="pt-6 relative block px-7 pb-4">FAQ</a></li>
                     </ul>
                 </div>
-            </div>
+
+            </nav>
         </header>
 
 
@@ -231,7 +231,6 @@
                 </section>
             </div>
         </main>
-    </div>
     </div>
 
     <script>
