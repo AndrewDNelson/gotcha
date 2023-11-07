@@ -7,7 +7,7 @@
         <header class="fixed top-0 left-0 right-0 backdrop-blur-lg backdrop-saturate-150 bg-white/50 h-[75px] z-40">
 
             
-            <nav class="py-1 px-8 max-w-7xl mx-auto flex justify-between items-center h-full">
+            <nav x-data="{ open: false }" class="py-1 px-8 max-w-7xl mx-auto flex justify-between items-center h-full">
                 {{-- Left side --}}
                 <div class="flex items-center">
                     {{-- Main link --}}
@@ -129,11 +129,12 @@
 
                 {{-- Responsive nav menu --}}
                 <div class="flex md:hidden items-center">
-                    <button class="inline-block self-center cursor-pointer appearance-none bg-transparent
+                    <button @click="open = ! open" 
+                    class="inline-block self-center cursor-pointer appearance-none bg-transparent
                     border-2 border-transparent rounded-md
                     w-12 h-12"
                     id="hamburger"> 
-                        <div class="tham tham-e-slider tham-w-5 mx-auto">
+                        <div :class="{'tham-active': open }" class="tham tham-e-slider tham-w-5 mx-auto">
                             <div class="tham-box">
                                 <div class="tham-inner bg-black !h-0.5 before:!h-0.5 after:!h-0.5"></div>
                             </div>
@@ -292,7 +293,6 @@
 
         hamburger.addEventListener('click', function() {
             // Toggle the class on the element
-            hamburger.children[0].classList.toggle('tham-active');
 
             ul.classList.toggle('opacity-0');
             ul.classList.toggle('opacity-100');
