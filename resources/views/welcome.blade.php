@@ -140,19 +140,49 @@
                             </div>
                         </div>
                     </button>
-                    <ul x-show="open" @click.outside="open = false"
-                    class="block m-0 p-0 absolute top-[75px] inset-x-0 z-30 bg-slate-100 w-screen h-[calc(100vh-75px)] list-none 
-                    text-black font-semibold text-xl leading-5"
-                    x-transition:enter="transition"
-                    x-transition:enter-start="opacity-0 -translate-y-4"
-                    x-transition:enter-end="opacity-100 translate-y-0"
-                    x-transition:leave="transition"
-                    x-transition:leave-start="opacity-100 translate-y-0"
-                    x-transition:leave-end="opacity-0 -translate-y-4">
-                        <li class="ease-out duration-300 translate-x-24 opacity-0"><a href="" class="pt-6 relative block px-7 pb-4">Sessions</a></li>
-                        <li class="ease-out duration-300 translate-x-24 opacity-0"><a href="" class="pt-6 relative block px-7 pb-4">Sponsors</a></li>
-                        <li class="ease-out duration-300 translate-x-24 opacity-0"><a href="" class="pt-6 relative block px-7 pb-4">Why attend</a></li>
-                        <li class="ease-out duration-300 translate-x-24 opacity-0"><a href="" class="pt-6 relative block px-7 pb-4">FAQ</a></li>
+                    <ul x-show="open"
+                            class="block m-0 p-0 absolute top-[75px] inset-x-0 z-30 bg-white w-screen h-[calc(100vh-75px)] list-none 
+                            text-black font-semibold text-xl leading-5 transition"
+                            x-transition:enter-start="opacity-0 -translate-y-4"
+                            x-transition:enter-end="opacity-100 translate-y-0"
+                            x-transition:leave-start="opacity-100 translate-y-0"
+                            x-transition:leave-end="opacity-0 -translate-y-4">
+                        <li x-show="open" 
+                                x-transition:enter="duration-300"
+                                x-transition:enter-start="opacity-0 translate-x-24"
+                                x-transition:enter-end="opacity-100 translate-x-0"
+                                x-transition:leave-start="opacity-100 translate-x-0"
+                                x-transition:leave-end="opacity-0 translate-x-24"
+                                class="transition ease-out">
+                            <a href="" class="pt-6 relative block px-7 pb-4">Sessions</a>
+                        </li>
+                        <li x-show="open" 
+                                x-transition:enter="duration-300 delay-100"
+                                x-transition:enter-start="opacity-0 translate-x-24"
+                                x-transition:enter-end="opacity-100 translate-x-0"
+                                x-transition:leave-start="opacity-100 translate-x-0"
+                                x-transition:leave-end="opacity-0 translate-x-24"
+                                class="transition ease-out">
+                            <a href="" class="pt-6 relative block px-7 pb-4">Sponsors</a>
+                        </li>
+                        <li x-show="open" 
+                                x-transition:enter="duration-300 delay-200"
+                                x-transition:enter-start="opacity-0 translate-x-24"
+                                x-transition:enter-end="opacity-100 translate-x-0"
+                                x-transition:leave-start="opacity-100 translate-x-0"
+                                x-transition:leave-end="opacity-0 translate-x-24"
+                                class="transition ease-out">
+                            <a href="" class="pt-6 relative block px-7 pb-4">Why attend</a>
+                        </li>
+                        <li x-show="open" 
+                                x-transition:enter="duration-300 delay-300"
+                                x-transition:enter-start="opacity-0 translate-x-24"
+                                x-transition:enter-end="opacity-100 translate-x-0"
+                                x-transition:leave-start="opacity-100 translate-x-0"
+                                x-transition:leave-end="opacity-0 translate-x-24"
+                                class="transition ease-out">
+                            <a href="" class="pt-6 relative block px-7 pb-4">FAQ</a>
+                        </li>
                     </ul>
                 </div>
 
@@ -293,22 +323,6 @@
             }
         });
 
-        // Small nav hamburger
-        const hamburger = document.getElementById('hamburger');
-        const ul = hamburger.nextElementSibling;
-
-        hamburger.addEventListener('click', function() {
-            let children = Array.from(ul.children);
-
-            children.forEach((child, index) => {
-                setTimeout(() => {
-                    child.classList.toggle('opacity-0'); 
-                    child.classList.toggle('opacity-100'); 
-                    child.classList.toggle('translate-x-24'); 
-                    child.classList.toggle('translate-x-0'); 
-                }, index * 100);
-            });
-        });
     </script>
 </body>
 
