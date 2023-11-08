@@ -6,7 +6,6 @@
 
         <header class="fixed top-0 left-0 right-0 backdrop-blur-lg backdrop-saturate-150 bg-white/50 h-[75px] z-40">
 
-            
             <nav x-data="{ open: false }" class="py-1 px-8 max-w-7xl mx-auto flex justify-between items-center h-full">
                 {{-- Left side --}}
                 <div class="flex items-center">
@@ -25,49 +24,59 @@
                                 class="text-black font-bold text-base xs:text-2xl pr-4 whitespace-nowrap">GitHub Universe</a>
                         </li>
                     </ol>
-                    {{-- Link options --}}
-                    <ul class="list-none hidden md:flex items-center">
-                        <li class="whitespace-nowrap">
-                        <a href="" class="font-semibold py-4 px-6 text-black no-underline relative hidden lg:block
-                                        after:content-[''] after:absolute after:left-0 after:bottom-2.5 after:w-full after:h-0.5 after:bg-black after:opacity-0 after:scale-0 after:origin-center after:transition
-                                        hover:after:scale-50 hover:after:opacity-50
-                                        focus:after:scale-50 focus:after:opacity-50
-                                        active:after:scale-75 active:after:opacity-100
-                                        ">Sessions</a>
-                        </li>
-                        <li class="whitespace-nowrap">
-                        <a href="" class="font-semibold py-4 px-6 text-black no-underline relative hidden lg:block
-                                        after:content-[''] after:absolute after:left-0 after:bottom-2.5 after:w-full after:h-0.5 after:bg-black after:opacity-0 after:scale-0 after:origin-center after:transition
-                                        hover:after:scale-50 hover:after:opacity-50
-                                        focus:after:scale-50 focus:after:opacity-50
-                                        active:after:scale-75 active:after:opacity-100
-                                        ">Speakers</a>
-                        </li>
-                        <li class="whitespace-nowrap">
-                            <a href="" class="font-semibold py-4 px-6 text-black no-underline relative hidden lg:block
-                                        after:content-[''] after:absolute after:left-0 after:bottom-2.5 after:w-full after:h-0.5 after:bg-black after:opacity-0 after:scale-0 after:origin-center after:transition
-                                        hover:after:scale-50 hover:after:opacity-50
-                                        focus:after:scale-50 focus:after:opacity-50
-                                        active:after:scale-75 active:after:opacity-100
-                                        ">Why attend</a>
-                        </li>
-                        <li class="whitespace-nowrap relative">
-                            <button type="button" class="font-semibold py-4 px-6 text-black no-underline relative inline-flex lg:hidden
-                                        after:content-[''] after:absolute after:left-0 after:bottom-2.5 after:w-full after:h-0.5 after:bg-black after:opacity-0 after:scale-0 after:origin-center after:transition
-                                        hover:after:scale-50 hover:after:opacity-50
-                                        focus:after:scale-50 focus:after:opacity-50
-                                        active:after:scale-75 active:after:opacity-100"
-                                aria-expanded="false" id="toggle-list">
-                                <span>More</span>
-                                <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                    <path fill-rule="evenodd"
-                                        d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                            </button>
-                            <div class="absolute left-1/2 z-10 mt-5 w-screen max-w-max -translate-x-1/2 px-4 hidden"
+
+                    {{-- Navigation links --}}
+                    <div class="hidden lg:flex items-center">
+                        <a href="" class="font-semibold py-4 px-6 text-black no-underline relative 
+                                after:content-[''] after:absolute after:left-0 after:bottom-2.5 after:w-full after:h-0.5 after:bg-black after:opacity-0 after:scale-0 after:origin-center after:transition
+                                hover:after:scale-50 hover:after:opacity-50
+                                focus:after:scale-50 focus:after:opacity-50
+                                active:after:scale-75 active:after:opacity-100
+                                ">Sessions</a>
+                        <a href="" class="font-semibold py-4 px-6 text-black no-underline relative 
+                                after:content-[''] after:absolute after:left-0 after:bottom-2.5 after:w-full after:h-0.5 after:bg-black after:opacity-0 after:scale-0 after:origin-center after:transition
+                                hover:after:scale-50 hover:after:opacity-50
+                                focus:after:scale-50 focus:after:opacity-50
+                                active:after:scale-75 active:after:opacity-100
+                                ">Speakers</a>
+                        <a href="" class="font-semibold py-4 px-6 text-black no-underline relative 
+                                after:content-[''] after:absolute after:left-0 after:bottom-2.5 after:w-full after:h-0.5 after:bg-black after:opacity-0 after:scale-0 after:origin-center after:transition
+                                hover:after:scale-50 hover:after:opacity-50
+                                focus:after:scale-50 focus:after:opacity-50
+                                active:after:scale-75 active:after:opacity-100
+                                ">Why attend</a>
+                        <a href="" class="font-semibold py-4 px-6 text-black no-underline relative 
+                                after:content-[''] after:absolute after:left-0 after:bottom-2.5 after:w-full after:h-0.5 after:bg-black after:opacity-0 after:scale-0 after:origin-center after:transition
+                                hover:after:scale-50 hover:after:opacity-50
+                                focus:after:scale-50 focus:after:opacity-50
+                                active:after:scale-75 active:after:opacity-100
+                                ">FAQ</a>
+                    </div>
+                    
+                    {{-- Responsive Navigation Links --}}
+                    <div @click.outside="open = false" class="hidden md:block lg:hidden">
+
+                        <button @click="open = ! open" type="button" class="font-semibold py-4 px-6 text-black no-underline relative items-center inline-flex lg:hidden
+                                after:content-[''] after:absolute after:left-0 after:bottom-2.5 after:w-full after:h-0.5 after:bg-black after:opacity-0 after:scale-0 after:origin-center after:transition
+                                hover:after:scale-50 hover:after:opacity-50
+                                focus:after:scale-50 focus:after:opacity-50
+                                active:after:scale-75 active:after:opacity-100">
+                            <span>More</span>
+                            <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd"
+                                    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </button>
+
+                        <div x-show="open"
+                                x-transition:enter-start="-translate-x-1/2 -translate-y-10 opacity-0"
+                                x-transition:enter-end="-translate-x-1/2 opacity-100"
+                                x-transition:leave-start="-translate-x-1/2 opacity-100"
+                                x-transition:leave-end="-translate-x-1/2 -translate-y-10 opacity-0"
+                                class="absolute left-1/2 z-10 mt-5 w-screen max-w-max -translate-x-1/2 px-4 transition"
                                 id="more-list">
-                                <div class="w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-white text-sm leading-6 shadow-lg ring-1 ring-gray-900/5">
+                            <div class="w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-white text-sm leading-6 shadow-lg ring-1 ring-gray-900/5">
                                 <div class="p-4">
                                     <div class="relative rounded-lg p-4 hover:bg-gray-50">
                                         <a href="#" class="font-semibold text-gray-900">
@@ -88,10 +97,9 @@
                                         </a>
                                     </div>
                                 </div>
-                                </div>
                             </div>
-                        </li>
-                    </ul>
+                        </div>
+                    </div>
                 </div>
 
                 {{-- Sign in and sign up --}}
@@ -301,26 +309,6 @@
                     path.classList.add(pathClasses[index]);
                 }
             });
-        });
-
-        // Opens the more dropdown
-        const toggleButton = document.getElementById('toggle-list');
-        const moreList = document.getElementById('more-list');
-
-        toggleButton.addEventListener('click', function() {
-            event.stopPropagation()
-
-            // Toggle the class on the element
-            moreList.classList.toggle('hidden');
-            moreList.classList.toggle('flex');
-        });
-
-        document.addEventListener('click', function(event) {
-            // Closes the more dropdown
-            if(event.target !== toggleButton && !moreList.contains(event.target) && moreList.classList.contains('flex')) {
-                moreList.classList.toggle('hidden');
-                moreList.classList.toggle('flex');
-            }
         });
 
     </script>
