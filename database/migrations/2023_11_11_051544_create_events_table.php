@@ -14,6 +14,9 @@ return new class extends Migration
         Schema::create('events', function (Blueprint $table) {
             $table->id();
             $table->foreignId('event_type_id')->constrained();
+            $table->dateTime('start_at');
+            $table->dateTime('end_at')->nullable();
+            $table->dateTime('post_at')->nullable();
             $table->timestamps();
         });
     }
