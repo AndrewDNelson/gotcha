@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('revives', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('player_id')->constrained();
             $table->timestamps();
         });
     }
