@@ -25,4 +25,12 @@ class Kill extends Model
     {
         return $this->belongsTo(Player::class, 'victim_id');
     }
+
+    /**
+     * Get the corresponding shuffle.
+     */
+    public function shuffle(): BelongsTo
+    {
+        return $this->belongsTo(Shuffle::class);
+    }
 }

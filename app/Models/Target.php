@@ -25,4 +25,12 @@ class Target extends Model
     {
         return $this->belongsTo(Player::class);
     }
+
+    /**
+     * Get the corresponding shuffle.
+     */
+    public function shuffle(): BelongsTo
+    {
+        return $this->belongsTo(Shuffle::class);
+    }
 }

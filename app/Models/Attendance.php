@@ -17,4 +17,12 @@ class Attendance extends Model
     {
         return $this->belongsTo(Player::class);
     }
+
+    /**
+     * Get the event player attended.
+     */
+    public function event(): BelongsTo
+    {
+        return $this->belongsTo(Event::class);
+    }
 }
