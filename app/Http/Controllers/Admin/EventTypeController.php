@@ -29,7 +29,9 @@ class EventTypeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        EventType::create($request->all());
+
+        return redirect()->route('admin.event-types.index');
     }
 
     /**
