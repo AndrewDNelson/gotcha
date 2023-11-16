@@ -29,7 +29,15 @@ class EventTypeController extends Controller
      */
     public function store(Request $request)
     {
-        EventType::create($request->all());
+
+        $attributes = $request->validate([
+            'name' => 'required|unique:event_types|max:255',
+            'required' => 'required',
+            'shuffle' => 'required',
+            'instant' => 'required',
+        ]);
+
+        EventType::create($attributes);
 
         return redirect()->route('admin.event-types.index');
     }

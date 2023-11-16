@@ -6,11 +6,11 @@
                 @method('POST')
                 @csrf
         
-                <x-forms.input name="name" label="Name" class="" />
+                <x-forms.input name="name" label="Name" class="w-full" />
 
-                <x-forms.toggle name="required" label="Required" class="w-[490px]"/>
-                <x-forms.toggle name="shuffle" label="Shuffle" class="w-[490px]"/>
-                <x-forms.toggle name="instant" label="Instant" class="w-[490px]"/>
+                <x-forms.toggle name="required" label="Required" class=""/>
+                <x-forms.toggle name="shuffle" label="Shuffle" class=""/>
+                <x-forms.toggle name="instant" label="Instant" class=""/>
 
                 <x-primary-button class="ml-3">
                     {{ __('Submit') }}
