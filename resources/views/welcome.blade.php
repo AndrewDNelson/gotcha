@@ -2,192 +2,15 @@
 
 <body class="font-sans antialiased bg-white opacity-0 transition-opacity ease-in-out duration-300 delay-100">
     
-    <header class="fixed top-0 left-0 right-0 backdrop-blur-lg backdrop-saturate-150 bg-white/50 h-16 z-40">
-        <nav x-data="{ open: false }" class="py-1 px-8 max-w-7xl mx-auto flex justify-between items-center h-full">
-            {{-- Left side --}}
-            <div class="flex items-center">
-                {{-- Main link --}}
-                <a href="{{ url('/')}}" class="pr-4">
-                    <svg class="h-8 fill-current" viewBox="0 0 580 156" xmlns="http://www.w3.org/2000/svg">
-                        <path class="text-black" d="M53.888 125.536C46.8053 125.536 40.2773 124.427 34.304 122.208C28.416 119.904 23.2533 116.661 18.816 112.48C14.464 108.299 11.0507 103.392 8.576 97.76C6.18667 92.128 4.992 85.9413 4.992 79.2C4.992 72.4587 6.18667 66.272 8.576 60.64C11.0507 55.008 14.5067 50.1013 18.944 45.92C23.3813 41.7387 28.5867 38.5387 34.56 36.32C40.5333 34.016 47.104 32.864 54.272 32.864C62.208 32.864 69.3333 34.1867 75.648 36.832C82.048 39.4773 87.424 43.3173 91.776 48.352L78.464 60.64C75.2213 57.2267 71.68 54.7093 67.84 53.088C64 51.3813 59.8187 50.528 55.296 50.528C50.944 50.528 46.976 51.2107 43.392 52.576C39.808 53.9413 36.6933 55.904 34.048 58.464C31.488 61.024 29.4827 64.0533 28.032 67.552C26.6667 71.0507 25.984 74.9333 25.984 79.2C25.984 83.3813 26.6667 87.2213 28.032 90.72C29.4827 94.2187 31.488 97.2907 34.048 99.936C36.6933 102.496 39.7653 104.459 43.264 105.824C46.848 107.189 50.7733 107.872 55.04 107.872C59.136 107.872 63.104 107.232 66.944 105.952C70.8693 104.587 74.6667 102.325 78.336 99.168L90.112 114.144C85.248 117.813 79.5733 120.629 73.088 122.592C66.688 124.555 60.288 125.536 53.888 125.536ZM71.168 111.456V77.792H90.112V114.144L71.168 111.456ZM152.894 125.536C145.811 125.536 139.241 124.384 133.182 122.08C127.209 119.776 122.003 116.533 117.566 112.352C113.214 108.171 109.801 103.264 107.326 97.632C104.937 92 103.742 85.856 103.742 79.2C103.742 72.544 104.937 66.4 107.326 60.768C109.801 55.136 113.257 50.2293 117.694 46.048C122.131 41.8667 127.337 38.624 133.31 36.32C139.283 34.016 145.769 32.864 152.766 32.864C159.849 32.864 166.334 34.016 172.222 36.32C178.195 38.624 183.358 41.8667 187.71 46.048C192.147 50.2293 195.603 55.136 198.078 60.768C200.553 66.3147 201.79 72.4587 201.79 79.2C201.79 85.856 200.553 92.0427 198.078 97.76C195.603 103.392 192.147 108.299 187.71 112.48C183.358 116.576 178.195 119.776 172.222 122.08C166.334 124.384 159.891 125.536 152.894 125.536ZM152.766 107.872C156.777 107.872 160.446 107.189 163.774 105.824C167.187 104.459 170.174 102.496 172.734 99.936C175.294 97.376 177.257 94.3467 178.622 90.848C180.073 87.3493 180.798 83.4667 180.798 79.2C180.798 74.9333 180.073 71.0507 178.622 67.552C177.257 64.0533 175.294 61.024 172.734 58.464C170.259 55.904 167.315 53.9413 163.902 52.576C160.489 51.2107 156.777 50.528 152.766 50.528C148.755 50.528 145.043 51.2107 141.63 52.576C138.302 53.9413 135.358 55.904 132.798 58.464C130.238 61.024 128.233 64.0533 126.782 67.552C125.417 71.0507 124.734 74.9333 124.734 79.2C124.734 83.3813 125.417 87.264 126.782 90.848C128.233 94.3467 130.195 97.376 132.67 99.936C135.23 102.496 138.217 104.459 141.63 105.824C145.043 107.189 148.755 107.872 152.766 107.872ZM234.684 124V51.296H206.012V34.4H284.092V51.296H255.42V124H234.684ZM336.879 125.536C329.967 125.536 323.524 124.427 317.551 122.208C311.663 119.904 306.543 116.661 302.191 112.48C297.839 108.299 294.426 103.392 291.951 97.76C289.562 92.128 288.367 85.9413 288.367 79.2C288.367 72.4587 289.562 66.272 291.951 60.64C294.426 55.008 297.839 50.1013 302.191 45.92C306.628 41.7387 311.791 38.5387 317.679 36.32C323.567 34.016 330.01 32.864 337.007 32.864C344.772 32.864 351.77 34.2293 357.999 36.96C364.314 39.6053 369.604 43.5307 373.871 48.736L360.559 61.024C357.487 57.5253 354.074 54.9227 350.319 53.216C346.564 51.424 342.468 50.528 338.031 50.528C333.85 50.528 330.01 51.2107 326.511 52.576C323.012 53.9413 319.983 55.904 317.423 58.464C314.863 61.024 312.858 64.0533 311.407 67.552C310.042 71.0507 309.359 74.9333 309.359 79.2C309.359 83.4667 310.042 87.3493 311.407 90.848C312.858 94.3467 314.863 97.376 317.423 99.936C319.983 102.496 323.012 104.459 326.511 105.824C330.01 107.189 333.85 107.872 338.031 107.872C342.468 107.872 346.564 107.019 350.319 105.312C354.074 103.52 357.487 100.832 360.559 97.248L373.871 109.536C369.604 114.741 364.314 118.709 357.999 121.44C351.77 124.171 344.73 125.536 336.879 125.536ZM449.314 34.4H470.05V124H449.314V34.4ZM408.61 124H387.874V34.4H408.61V124ZM450.85 87.264H407.074V69.728H450.85V87.264ZM479.473 124L519.409 34.4H539.889L579.953 124H558.193L525.425 44.896H533.617L500.721 124H479.473ZM499.441 104.8L504.945 89.056H551.025L556.657 104.8H499.441Z"/>
-                    </svg>
-                </a>
+    <x-navigation.public :pages="[
+        ['route' => 'dashboard', 'text' => 'Sessions'],
+        ['route' => 'dashboard', 'text' => 'Speakers'],
+        ['route' => 'dashboard', 'text' => 'Why attend'],
+        ['route' => 'dashboard', 'text' => 'FAQ'],
+    ]" />
 
-                {{-- Navigation links --}}
-                <div class="hidden lg:flex items-center">
-                    <a href="" class="font-semibold py-4 px-6 text-black no-underline relative 
-                            after:content-[''] after:absolute after:left-0 after:bottom-2.5 after:w-full after:h-0.5 after:bg-black after:opacity-0 after:scale-0 after:origin-center after:transition
-                            hover:after:scale-50 hover:after:opacity-50
-                            focus:after:scale-50 focus:after:opacity-50
-                            active:after:scale-75 active:after:opacity-100
-                            ">Sessions</a>
-                    <a href="" class="font-semibold py-4 px-6 text-black no-underline relative 
-                            after:content-[''] after:absolute after:left-0 after:bottom-2.5 after:w-full after:h-0.5 after:bg-black after:opacity-0 after:scale-0 after:origin-center after:transition
-                            hover:after:scale-50 hover:after:opacity-50
-                            focus:after:scale-50 focus:after:opacity-50
-                            active:after:scale-75 active:after:opacity-100
-                            ">Speakers</a>
-                    <a href="" class="font-semibold py-4 px-6 text-black no-underline relative 
-                            after:content-[''] after:absolute after:left-0 after:bottom-2.5 after:w-full after:h-0.5 after:bg-black after:opacity-0 after:scale-0 after:origin-center after:transition
-                            hover:after:scale-50 hover:after:opacity-50
-                            focus:after:scale-50 focus:after:opacity-50
-                            active:after:scale-75 active:after:opacity-100
-                            ">Why attend</a>
-                    <a href="" class="font-semibold py-4 px-6 text-black no-underline relative 
-                            after:content-[''] after:absolute after:left-0 after:bottom-2.5 after:w-full after:h-0.5 after:bg-black after:opacity-0 after:scale-0 after:origin-center after:transition
-                            hover:after:scale-50 hover:after:opacity-50
-                            focus:after:scale-50 focus:after:opacity-50
-                            active:after:scale-75 active:after:opacity-100
-                            ">FAQ</a>
-                </div>
-                
-                {{-- Responsive Navigation Links --}}
-                <div @click.outside="open = false" class="hidden md:block lg:hidden">
-
-                    <button @click="open = ! open" type="button" class="font-semibold py-4 px-6 text-black no-underline relative items-center inline-flex lg:hidden
-                            after:content-[''] after:absolute after:left-0 after:bottom-2.5 after:w-full after:h-0.5 after:bg-black after:opacity-0 after:scale-0 after:origin-center after:transition
-                            hover:after:scale-50 hover:after:opacity-50
-                            focus:after:scale-50 focus:after:opacity-50
-                            active:after:scale-75 active:after:opacity-100">
-                        <span>More</span>
-                        <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                            <path fill-rule="evenodd"
-                                d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-                                clip-rule="evenodd" />
-                        </svg>
-                    </button>
-
-                    <div x-show="open"
-                            x-transition:enter-start="-translate-x-1/2 -translate-y-10 opacity-0"
-                            x-transition:enter-end="-translate-x-1/2 opacity-100"
-                            x-transition:leave-start="-translate-x-1/2 opacity-100"
-                            x-transition:leave-end="-translate-x-1/2 -translate-y-10 opacity-0"
-                            class="absolute left-1/2 z-10 mt-5 w-screen max-w-max -translate-x-1/2 px-4 transition"
-                            id="more-list">
-                        <div class="w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-white text-sm leading-6 shadow-lg ring-1 ring-gray-900/5">
-                            <div class="p-4">
-                                <div class="relative rounded-lg p-4 hover:bg-gray-50">
-                                    <a href="#" class="font-semibold text-gray-900">
-                                        Sessions
-                                        <span class="absolute inset-0"></span>
-                                    </a>
-                                </div>
-                                <div class="relative rounded-lg p-4 hover:bg-gray-50">
-                                    <a href="#" class="font-semibold text-gray-900">
-                                        Speakers
-                                        <span class="absolute inset-0"></span>
-                                    </a>
-                                </div>
-                                <div class="relative rounded-lg p-4 hover:bg-gray-50">
-                                    <a href="#" class="font-semibold text-gray-900">
-                                        Why attend
-                                        <span class="absolute inset-0"></span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            {{-- Sign in and sign up --}}
-            <div class="hidden md:flex items-center gap-2">
-                <a href="" class="transition group gap-2 inline-flex items-center justify-center rounded-md bg-transparent px-5 py-2 h-12 text-base font-semibold text-black shadow-sm border-slate-200 border-2  hover:border-slate-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
-                    Sign in
-                    <svg class="transition -translate-x-0 group-hover:translate-x-1 group-focus:translate-x-1"
-                        width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"
-                        focusable="false" data-testid="Button-expandable-arrow">
-                        <path fill="currentColor"
-                            d="M7.28033 3.21967C6.98744 2.92678 6.51256 2.92678 6.21967 3.21967C5.92678 3.51256 5.92678 3.98744 6.21967 4.28033L7.28033 3.21967ZM11 8L11.5303 8.53033C11.8232 8.23744 11.8232 7.76256 11.5303 7.46967L11 8ZM6.21967 11.7197C5.92678 12.0126 5.92678 12.4874 6.21967 12.7803C6.51256 13.0732 6.98744 13.0732 7.28033 12.7803L6.21967 11.7197ZM6.21967 4.28033L10.4697 8.53033L11.5303 7.46967L7.28033 3.21967L6.21967 4.28033ZM10.4697 7.46967L6.21967 11.7197L7.28033 12.7803L11.5303 8.53033L10.4697 7.46967Z">
-                        </path>
-                        <path
-                            class="origin-center scale-0 group-hover:scale-100 group-focus:scale-100 transition"
-                            stroke="currentColor" d="M1.75 8H11" stroke-width="1.5" stroke-linecap="round">
-                        </path>
-                    </svg>
-                </a>
-                    
-                <a href="" class="group gap-2 inline-flex items-center justify-center rounded-md bg-black px-5 py-2 h-12 text-base font-semibold text-white shadow-sm hover:bg-slate-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
-                    Sign up
-                    <svg class="transition -translate-x-0 group-hover:translate-x-1 group-focus:translate-x-1"
-                        width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"
-                        focusable="false" data-testid="Button-expandable-arrow">
-                        <path fill="currentColor"
-                            d="M7.28033 3.21967C6.98744 2.92678 6.51256 2.92678 6.21967 3.21967C5.92678 3.51256 5.92678 3.98744 6.21967 4.28033L7.28033 3.21967ZM11 8L11.5303 8.53033C11.8232 8.23744 11.8232 7.76256 11.5303 7.46967L11 8ZM6.21967 11.7197C5.92678 12.0126 5.92678 12.4874 6.21967 12.7803C6.51256 13.0732 6.98744 13.0732 7.28033 12.7803L6.21967 11.7197ZM6.21967 4.28033L10.4697 8.53033L11.5303 7.46967L7.28033 3.21967L6.21967 4.28033ZM10.4697 7.46967L6.21967 11.7197L7.28033 12.7803L11.5303 8.53033L10.4697 7.46967Z">
-                        </path>
-                        <path
-                            class="origin-center scale-0 group-hover:scale-100 group-focus:scale-100 transition"
-                            stroke="currentColor" d="M1.75 8H11" stroke-width="1.5" stroke-linecap="round">
-                        </path>
-                    </svg>
-                </a>
-            </div>
-
-            {{-- Responsive nav menu --}}
-            <div class="flex md:hidden items-center">
-                <button @click="open = ! open" 
-                class="inline-block self-center cursor-pointer appearance-none bg-transparent
-                border-2 border-transparent rounded-md
-                w-12 h-12"
-                id="hamburger"> 
-                    <div :class="{'tham-active': open }" class="tham tham-e-slider tham-w-5 mx-auto">
-                        <div class="tham-box">
-                            <div class="tham-inner bg-black !h-0.5 before:!h-0.5 after:!h-0.5"></div>
-                        </div>
-                    </div>
-                </button>
-                <ul x-show="open"
-                        class="block m-0 p-0 absolute top-16 inset-x-0 z-30 bg-white w-screen h-[calc(100dvh-64px)] list-none 
-                        text-black font-semibold text-xl leading-5 transition"
-                        x-transition:enter-start="opacity-0 -translate-y-4"
-                        x-transition:enter-end="opacity-100 translate-y-0"
-                        x-transition:leave-start="opacity-100 translate-y-0"
-                        x-transition:leave-end="opacity-0 -translate-y-4">
-                    <li x-show="open" 
-                            x-transition:enter="duration-300"
-                            x-transition:enter-start="opacity-0 translate-x-24"
-                            x-transition:enter-end="opacity-100 translate-x-0"
-                            x-transition:leave-start="opacity-100 translate-x-0"
-                            x-transition:leave-end="opacity-0 translate-x-24"
-                            class="transition ease-out">
-                        <a href="" class="pt-6 relative block px-7 pb-4">Sessions</a>
-                    </li>
-                    <li x-show="open" 
-                            x-transition:enter="duration-300 delay-100"
-                            x-transition:enter-start="opacity-0 translate-x-24"
-                            x-transition:enter-end="opacity-100 translate-x-0"
-                            x-transition:leave-start="opacity-100 translate-x-0"
-                            x-transition:leave-end="opacity-0 translate-x-24"
-                            class="transition ease-out">
-                        <a href="" class="pt-6 relative block px-7 pb-4">Sponsors</a>
-                    </li>
-                    <li x-show="open" 
-                            x-transition:enter="duration-300 delay-200"
-                            x-transition:enter-start="opacity-0 translate-x-24"
-                            x-transition:enter-end="opacity-100 translate-x-0"
-                            x-transition:leave-start="opacity-100 translate-x-0"
-                            x-transition:leave-end="opacity-0 translate-x-24"
-                            class="transition ease-out">
-                        <a href="" class="pt-6 relative block px-7 pb-4">Why attend</a>
-                    </li>
-                    <li x-show="open" 
-                            x-transition:enter="duration-300 delay-300"
-                            x-transition:enter-start="opacity-0 translate-x-24"
-                            x-transition:enter-end="opacity-100 translate-x-0"
-                            x-transition:leave-start="opacity-100 translate-x-0"
-                            x-transition:leave-end="opacity-0 translate-x-24"
-                            class="transition ease-out">
-                        <a href="" class="pt-6 relative block px-7 pb-4">FAQ</a>
-                    </li>
-                </ul>
-            </div>
-
-        </nav>
-    </header>
-
-    <main class="pt-16 flex flex-col gap-12">
-        
-        <section class="flex flex-col md:gap-8 gap-6 px-8 max-w-7xl mx-auto">
+    <main class="flex flex-col gap-12"> 
+        <section class="flex flex-col gap-6 md:gap-8 px-6 md:px-8 max-w-7xl mx-auto">
             {{-- Hero Image --}}
             <div class="relative mx-auto overflow-hidden rounded-3xl md:h-[465px] h-72 shadow-xl">
                 <img class="object-cover h-full transition ease-out duration-300 hover:scale-105"
@@ -256,7 +79,6 @@
                 </a>
             </div>
         </section>
-
     </main>
 
     <script>

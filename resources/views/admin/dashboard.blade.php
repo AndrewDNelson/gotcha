@@ -2,6 +2,7 @@
 <x-shared-layout>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100">
+            <div class="h-16 bg-white"></div>
             <nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
                 <!-- Primary Navigation Menu -->
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -9,8 +10,8 @@
                         <div class="flex">
                             <!-- Logo -->
                             <div class="shrink-0 flex items-center">
-                                <a href="{{ route('admin.dashboard') }}">
-                                    <x-application-logo class="block h-9 w-auto fill-current text-gray-800" />
+                                <a href="{{ route('admin.dashboard') }}" class="pr-4">
+                                    <x-application-logo class="h-8 w-auto fill-current text-slate-500" />
                                 </a>
                             </div>
             
@@ -102,8 +103,6 @@
                     </div>
                 </div>
             </nav>
-            
-
             <!-- Page Heading -->
             @if (isset($header))
                 <header class="bg-white shadow">
@@ -114,7 +113,6 @@
                     </div>
                 </header>
             @endif
-
             <!-- Page Content -->
             <main>
                 <div class="py-12">
