@@ -2,7 +2,10 @@
 <x-shared-layout>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100">
-            <div class="h-16 bg-white"></div>
+            <x-navigation.admin :pages="[
+                ['route' => 'admin.dashboard', 'text' => 'Dashboard'],
+            ]" />
+
             <nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
                 <!-- Primary Navigation Menu -->
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

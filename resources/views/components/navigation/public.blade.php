@@ -15,7 +15,7 @@
                     {{-- Navigation links --}}
                     <div class="hidden lg:flex items-center">
                         @foreach ($pages as $page)
-                            <a :href="route($page['route'])" class="font-semibold py-4 px-6 text-black no-underline relative
+                            <a href="{{ route($page['route']) }}" class="font-semibold py-4 px-6 text-black no-underline relative
                                     after:content-[''] after:absolute after:left-0 after:bottom-2.5 after:w-full after:h-0.5 after:bg-black after:opacity-0 after:scale-0 after:origin-center after:transition
                                     hover:after:scale-50 hover:after:opacity-50
                                     focus:after:scale-50 focus:after:opacity-50
@@ -46,7 +46,7 @@
         
                             <x-slot name="content">
                                 @foreach ($pages as $page)
-                                    <x-dropdown-link :href="route($page['route'])">
+                                    <x-dropdown-link href="{{ route($page['route']) }}">
                                         {{ $page['text'] }}
                                     </x-dropdown-link>
                                 @endforeach
@@ -121,7 +121,7 @@
                                         x-transition:leave-start="opacity-100 translate-x-0"
                                         x-transition:leave-end="opacity-0 translate-x-24"
                                         class="transition ease-out">
-                                    <a :href="route($page['route'])" class="pt-6 relative block px-7 pb-4">{{ $page['text'] }}</a>
+                                    <a href="{{ route($page['route']) }}" class="pt-6 relative block px-7 pb-4">{{ $page['text'] }}</a>
                                 </li>
                             @endforeach
                         </ul>
