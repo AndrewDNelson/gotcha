@@ -2,8 +2,9 @@
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100">
             <x-navigation-layout :pages="[
-                    ['route' => 'dashboard', 'text' => 'Dashboard'],
+                    ['route' => 'admin.dashboard', 'text' => 'Dashboard'],
                 ]">
+
                 <x-slot:right>
                     <!-- Settings Dropdown -->
                     <div class="hidden md:flex md:items-center">
@@ -46,16 +47,16 @@
                             <div class="text-black">{{ Auth::user()->name }}</div>
                             <div class="text-slate-400">{{ Auth::user()->email }}</div>
                         </div>
-                        <a href="{{ route('profile.edit')}}" class="px-5 py-2 h-12 transition group gap-2 flex items-center justify-center rounded-md bg-transparent text-base font-semibold text-black shadow-sm border-slate-200 border-2  hover:border-slate-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
+                        <a href="{{ route('admin.profile.edit')}}" class="px-5 py-2 h-12 transition group gap-2 flex items-center justify-center rounded-md bg-transparent text-base font-semibold text-black shadow-sm border-slate-200 border-2  hover:border-slate-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
                             Profile
                         </a>
-                        <form method="POST" action="{{ route('logout') }}">
+                        <form method="POST" action="{{ route('admin.logout') }}">
                             @csrf
         
                             <button class="px-5 py-2 h-12 w-full group gap-2 flex items-center justify-center rounded-md bg-black text-base font-semibold text-white shadow-sm hover:bg-slate-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
-                                    type="submit" :href="route('logout')"
+                                    type="submit" :href="route('admin.logout')"
                                     onclick="event.preventDefault();
-                                    this.closest('form').submit();">
+                                                this.closest('form').submit();">
                                 {{ __('Log Out') }}
                             </button>
                         </form>
