@@ -2,7 +2,7 @@
 
     <body class="font-sans antialiased bg-white opacity-0 transition-opacity ease-in-out duration-300 delay-100">
         
-        <x-navigation.admin :pages="[
+        <x-navigation-layout :pages="[
                 ['route' => 'dashboard', 'text' => 'Sessions'],
                 ['route' => 'dashboard', 'text' => 'Speakers'],
                 ['route' => 'dashboard', 'text' => 'Why attend'],
@@ -77,7 +77,7 @@
                 </div>
             </x-slot:bottom>
 
-        </x-navigation.public>
+        </x-navigation-layout>
 
         <main class="flex flex-col gap-12"> 
             <section class="flex flex-col gap-6 md:gap-8 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">

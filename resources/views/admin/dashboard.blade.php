@@ -2,7 +2,7 @@
 <x-shared-layout>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100">
-            <x-navigation.admin :pages="[
+            <x-navigation-layout :pages="[
                 ['route' => 'admin.dashboard', 'text' => 'Dashboard'],
                 ['route' => 'dashboard', 'text' => 'Hello'],
                 ['route' => 'dashboard', 'text' => 'Bye'],
@@ -65,7 +65,7 @@
                         </form>
                     </div>
                 </x-slot:bottom>
-            </x-navigation.admin>
+            </x-navigation-layout>
 
             <!-- Page Heading -->
             @if (isset($header))
