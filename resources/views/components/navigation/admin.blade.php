@@ -60,7 +60,9 @@
     
             {{-- Right side --}}
             <div class="flex items-center gap-4">
-                {{ $right }}
+                @isset($right)
+                    {{ $right }}
+                @endisset
 
                 {{-- Responsive nav menu --}}
                 <div class="flex md:hidden items-center">
