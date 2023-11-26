@@ -24,13 +24,13 @@
                         @method('POST')
                         @csrf
                 
-                        <x-forms.input name="name" label="Name" class="w-full" />
+                        <x-forms.input name="name" label="Name" class="mt-1 block w-full" />
         
-                        <x-forms.toggle name="required" label="Required" class=""/>
-                        <x-forms.toggle name="shuffle" label="Shuffle" class=""/>
-                        <x-forms.toggle name="instant" label="Instant" class=""/>
+                        <x-forms.toggle name="required" label="Required" class="mt-1 block w-full"/>
+                        <x-forms.toggle name="shuffle" label="Shuffle" class="mt-1 block w-full"/>
+                        <x-forms.toggle name="instant" label="Instant" class="mt-1 block w-full"/>
         
-                        <x-primary-button class="ml-3">
+                        <x-primary-button class="">
                             Submit
                         </x-primary-button>
                     </form>
