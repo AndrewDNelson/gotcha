@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\admin\EventController;
 use App\Http\Controllers\Admin\EventTypeController;
 use App\Http\Controllers\Admin\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -21,6 +22,7 @@ Route::prefix('admin')->name('admin.')->middleware(['auth:admin', 'verified'])->
     })->name('dashboard');
 
     Route::resource('/event-types', EventTypeController::class);
+    Route::resource('/events', EventController::class);
 });
 
 Route::prefix('admin')->middleware('auth:admin')->group(function () {
