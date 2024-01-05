@@ -71,6 +71,12 @@ class EventTypeController extends Controller
      */
     public function destroy(EventType $eventType)
     {
-        //
+        $eventType->events()->each(function ($event) {
+            $event->delete();
+        });
+    
+        $eventType->delete();
+    
+        return redirect()->route('admin.event-types.index');
     }
 }

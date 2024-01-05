@@ -26,9 +26,37 @@
                 
                         <x-forms.input name="name" label="Name" class="mt-1 block w-full" />
         
-                        <x-forms.toggle name="required" label="Required" class="mt-1 block w-full"/>
-                        <x-forms.toggle name="shuffle" label="Shuffle" class="mt-1 block w-full"/>
-                        <x-forms.toggle name="instant" label="Instant" class="mt-1 block w-full"/>
+                        <x-forms.toggle name="required" label="Required" class="mt-1 block w-full">
+                            <x-slot name="one">
+                                <div class="text-base font-semibold">No, thanks</div>
+                                <div class="">Players do not have to attend</div>
+                            </x-slot>
+                            <x-slot name="two">
+                                <div class="text-base font-semibold">Yes</div>
+                                <div class="">Players are removed if they miss it</div>
+                            </x-slot>
+                        </x-forms.toggle>
+
+                        <x-forms.toggle name="shuffle" label="Shuffle" class="mt-1 block w-full">
+                            <x-slot name="one">
+                                <div class="text-base font-semibold">No, thanks</div>
+                                <div class="">Kill order will stay the same</div>
+                            </x-slot>
+                            <x-slot name="two">
+                                <div class="text-base font-semibold">Yes</div>
+                                <div class="">Once event ends, targets will be shuffled</div>
+                            </x-slot>
+                        </x-forms.toggle>
+                        <x-forms.toggle name="instant" label="Instant" class="mt-1 block w-full">
+                            <x-slot name="one">
+                                <div class="text-base font-semibold">No, thanks</div>
+                                <div class="">The event is a window of time</div>
+                            </x-slot>
+                            <x-slot name="two">
+                                <div class="text-base font-semibold">Yes</div>
+                                <div class="">Event will immidiately happen. Ex. Game start, Kill cutoff</div>
+                            </x-slot>
+                        </x-forms.toggle>
         
                         <x-primary-button class="">
                             Submit
