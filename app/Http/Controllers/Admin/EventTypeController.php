@@ -13,7 +13,7 @@ class EventTypeController extends Controller
      */
     public function index()
     {
-        return view('admin.event-types.index');
+        return view('admin.event-types.index', ['eventTypes' => EventType::all()]);
     }
 
     /**
